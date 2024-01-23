@@ -2,6 +2,8 @@ package LineComparison;
 import java.awt.*;
 import java.lang.Math;
 
+import static java.lang.Double.compare;
+
 public class LineComparison {
     public static void main(String[] args) {
 
@@ -16,13 +18,9 @@ public class LineComparison {
         System.out.print("Length of line 2 is ");
         System.out.println(length2);
 
-        // UC2-To Compare Length of the 2 lines
-        if (length1 == length2) {
-            System.out.println("Lengths of two lines are equal");
-        } else if (length1 > length2) {
-            System.out.println("Line 1 has greater length than line 2");
-        } else {
-            System.out.println("line 2 has greater length than line 1");
-        }
+        // UC3-To Compare Length of the 2 lines using compare method()
+        System.out.println(compare(length1,length2)); // returns 0 if lengths are equal
+                                                      // returns 1 if length1 is greater
+                                                      // returns -1 if length2 is greater
     }
 }
